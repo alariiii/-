@@ -1,0 +1,53 @@
+Be a Pimp - Prostitute Manager  (CET mod, version 1.1.0)
+Credits and thanks
+===========================================================================
+
+OpenSex Manager
+  The scene engine (workspots through AMM), the position sliders, the undress-by-appearance-tags method, the look
+  restore check and the Bag of Dicks equip method were adapted from "OpenSex Manager" (same author as this mod).
+  Core/cron.lua (timers) comes from "Dynamic KillCAM" (same author as this mod).
+
+Pose data used for labels and categories (Data/pose_meta.lua is generated from it):
+  OpenSex (CC BY-SA 4.0) - animations by acepleiades (313 scenes) and Frolique (4 scenes); scene data by acepleiades,
+    VersuchDrei, DragoFall.  https://github.com/acepleiades/OpenSex
+  OStimNG (GPLv3) - VersuchDrei et al., animations by Ace and Moon.  https://github.com/VersuchDrei/OStimNG
+  Ported to Cyberpunk 2077 / AMM by blackpotoftea (NightCityNet).
+  The original authors did not make this mod and do not endorse it.
+
+Pleasures of Night City VOL.1 (OPTIONAL, not included)
+  Extra animations by PinkyDude, installed in AMM (Collabs/Custom Poses). When present, its 28 two-person poses
+  (missionary, doggy, cowgirl, oral) appear in the pose list with the prefix "PoNC". The author did not make this mod
+  and does not endorse it.
+
+Night City Allies
+  The way NPCs are walked, held and driven (AI move / hold / mount / drive commands, navmesh points, traffic lanes)
+  follows the approach of "Night City Allies". None of its files are included.
+
+GTA JoyRide  (the author's own mod)
+  The JoyRide mode (Core/joyride.lua) reuses the mechanics of the author's mod "GTA JoyRide": how it finds the people around the car
+  (targeting system search), the seats (seat_back_left / seat_back_right), the rocking (the hops, the 15 s, the sound 1.5 s after the
+  start), the rear free camera, the "drop me where it is busy" rule, the "drive to a quiet zone" rule (nobody around before the car rocks) and
+the way the passenger is swapped for a controllable copy (DynamicEntitySpec) and mounted with AIMountCommand. The three rocking sounds (man + woman, man + man,
+  woman + woman) come from it too: they are in r6/audioware/BeAGigolo as pimp_joyride_mf / _mm / _ff, so both mods can be installed
+  together. No voice lines are used.
+
+SECURITY  (the author's own mod)
+  How guards and hired workers get and use weapons (Core/ent.lua, Core/guards.lua) follows the author's mod "SECURITY": real items from
+  the NPC's inventory (GetItemList + the "Weapon" tag), AIEquipCommand, AISwitchToPrimary/SecondaryWeaponCommand, AIUnequipCommand,
+  AINoRole for a guard standing at his post and AIFollowerRole (follows the player, friendly attitude) while he fights.
+  The JoyRide client uses the same follower role and, like GTA JoyRide, a spawned copy of the passer-by that obeys commands.
+
+Sex Framework  (the author's own mod)
+  The way the window finds the car V aims at (Ent.VehicleLookedAt: the crosshair object the way AMM asks it, then the vehicle closest
+  to the crosshair, then a car right next to V) and how a car record gets its name come from the author's mod "Sex Framework".
+  The Client Sex Park rocks the car with the same hops and sounds as GTA JoyRide - without its rear camera.
+
+Bag of Dicks (dp77_bagofdicks)  -  REQUIRED, not included
+  Every man in a scene (clients and male workers) automatically gets the item "Items.dp77_bagofdicks_large"
+  (or regular / extra large, by the setting). The mod is not included - install it from its own Nexus page.
+  Its author did not make this mod and does not endorse it.
+
+Audioware  -  sounds (the .mp3 files in r6/audioware/BeAGigolo are placeholders).
+
+Requires (not included): Cyber Engine Tweaks, Codeware, Appearance Menu Mod (MaximiliumM), the OpenSex pose pack
+(installed in AMM), Bag of Dicks, Audioware. Optional: Pleasures of Night City VOL.1.
